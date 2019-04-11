@@ -1,0 +1,19 @@
+{
+  "name": "clicky_svg_test",
+  "version": "1.0.0",
+  "description": "This is a place where I can test how to make irregular shapes linkable and interactive.\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;3D\u001b[1;3D\u001b[1;3D\u001b[1;3D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "js/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tromlet/clickable_svg_test.git"
+  },
+  "author": "Tom Spettigue",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tromlet/clickable_svg_test/issues"
+  },
+  "homepage": "https://github.com/tromlet/clickable_svg_test#readme"
+}
