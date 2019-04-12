@@ -1,13 +1,33 @@
 @import "_reset.scss";
 
-.container {
+.body-container {
     width: 100vw;
     background-color: cornflowerblue;
     padding: 2%;
+    display: flex;
+    justify-content: center;
 }
 
-// .map-container {
-//     // height: 122rem;
-//     width: auto;
-//     background-color: red;
-// }
+.map-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map {
+    height: 70vh;
+    width: 114vh;
+    // background: center / contain no-repeat url("../img/us-map-filled.svg");
+}
+
+.map-modal-pusher {
+    height: 70vh;
+    width: 45vh;
+    background-color: rgba(0,0,0,0);
+}
+
+.map-modal {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    display: none;
+}
