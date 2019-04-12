@@ -8,8 +8,9 @@
 
     <body>
         <div class="body-container">
-            <div class="map-container">
-                <div class="map">
+            <div class="map-modal-container">
+                <div class="map-container">
+                    <h4 id="map-instructions">SELECT A STATE</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 656.71 536.59">
                         <defs>
                             <style>
@@ -31,8 +32,8 @@
                                 .cls-3 {
                                     font-size: 20.67px;
                                     fill: #00a2e1;
-                                    font-family: AvenirNextLTPro-Heavy, Avenir Next LT Pro;
-                                    font-weight: 800
+                                    font-family: "Avenir Next LT Pro", Helvetica, Arial, sans-serif;
+                                    font-weight: 900;
                                 }
                             </style>
                         </defs>
@@ -103,6 +104,9 @@
                 </div>
                 <div class="map-modal-pusher">
                     <div class="map-modal">
+                        <div class="map-modal-header">
+                            <span class="city-name">CITY NAME</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,6 +117,6 @@
 			  src="https://code.jquery.com/jquery-3.4.0.min.js"
 			  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
               crossorigin="anonymous"></script>
-        <script src="js/main.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

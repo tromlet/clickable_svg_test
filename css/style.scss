@@ -1,33 +1,60 @@
 @import "_reset.scss";
 
+// Classes
+
 .body-container {
     width: 100vw;
-    background-color: cornflowerblue;
     padding: 2%;
     display: flex;
     justify-content: center;
 }
 
-.map-container {
+.city-name {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 900;
+    font-family: "Avenir Next LT Pro", Helvetica, Arial, sans-serif;
+    background: #074E6F;
+}
+
+.map-modal-container {
     display: flex;
     justify-content: space-between;
 }
 
-.map {
-    height: 70vh;
-    width: 114vh;
-    // background: center / contain no-repeat url("../img/us-map-filled.svg");
+.map-container {
+    height: 48vh;
+    width: 78vh;
+    background: cornflowerblue;
+    margin-right: 5vh;
 }
 
 .map-modal-pusher {
-    height: 70vh;
-    width: 45vh;
+    height: 48vh;
+    width: 47vh;
+    margin-top: 3rem;
     background-color: rgba(0,0,0,0);
 }
 
 .map-modal {
     height: 100%;
     width: 100%;
-    background-color: red;
+    padding: .4rem;
+    border: solid .4rem #B8D3DE;
+    background-color: #fff;
     display: none;
+}
+
+// ID's
+
+// #ca-modal-content {
+// }
+
+#map-instructions {
+    font-size: 2rem;
+    color: #074E6F;
+    font-family: "Avenir Next LT Pro", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
 }
