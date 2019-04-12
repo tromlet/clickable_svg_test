@@ -6,49 +6,64 @@
     width: 100vw;
     padding: 2%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .city-name {
+    background: #005071;
+    width: auto;
     font-size: 2rem;
     color: #fff;
     font-weight: 900;
     font-family: "Avenir Next LT Pro", Helvetica, Arial, sans-serif;
     background: #074E6F;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
-.map-modal-container {
+.header-and-map-container {
+}
+
+.hero-container {
+    width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .map-container {
-    height: 48vh;
-    width: 78vh;
-    background: cornflowerblue;
-    margin-right: 5vh;
+    height: 33vw;
+    width: 40vw;
 }
 
-.map-modal-pusher {
-    height: 48vh;
-    width: 47vh;
-    margin-top: 3rem;
-    background-color: rgba(0,0,0,0);
+.map-modal-container {
+    height: 100%;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between
 }
 
 .map-modal {
-    height: 100%;
-    width: 100%;
-    padding: .4rem;
+    height: 23vw;
+    width: 22vw;
+    box-sizing: border-box;
     border: solid .4rem #B8D3DE;
     background-color: #fff;
     display: none;
 }
 
-// ID's
 
-// #ca-modal-content {
-// }
+// ID's
 
 #map-instructions {
     font-size: 2rem;
