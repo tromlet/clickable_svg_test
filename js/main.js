@@ -76,56 +76,43 @@ let mapModalContent = {
 }
 
 
-// More programmatic show/hide function
-//
-// function showHideModal(stateID) {
-//   $("#" + stateID).click(function() {
-      
-  
-//     $(".map-modal").fadeToggle("fast");
-//     $("#modal-instructions").fadeToggle("fast");
-//   });
-// }
-
-// Working show/hide function (for California)
-//
-// $(document).ready(function() {
-//   $("#CA").click(function() {
-    
-
-//     $(".map-modal").fadeToggle("fast");
-//     $("#modal-instructions").fadeToggle("fast");
-//   });
-// });
-
 // This makes the modal "X" close button close the modal.
 //
 $(document).ready(function() {
-  $(".modal-close-button").click(function() {
+  $(".map-modal-close-button").click(function() {
     hideModal();
   });
 });
 
+$(document).ready(function() {
+  if ($(".map-modal").css("display") != "none") {
+    $("div").not(".map-modal").click(function() {
+      hideModal();
+    });
+  }
+});
+
+
 // Abstracting the modal show/hide functions
 //
 function showModal() {
-  $(".map-modal, #modal-instructions").fadeIn("fast");
+  $(".map-modal, #map-modal-instructions").fadeIn("fast");
 }
 
 function hideModal() {
-  $(".map-modal, #modal-instructions").fadeOut("fast");
+  $(".map-modal, #map-modal-instructions").fadeOut("fast");
 }
 
-// This resets the modal so that if the user clicks a
-// subsequent state, it doesn't get littered with irrelevant
-// city names or the wrong state image.
+// This resets the modal so that if the user clicks a subsequent state, it doesn't get littered with
+// irrelevant city names and the wrong state image. It does what is says -- resets the modal!
 //
 function resetModal() {
-  $(".modal-location-list > ul > li").remove();
-  $(".modal-state-image").attr("src","img/modal-colorado.svg");
+  $(".map-modal-location-list > ul > li").remove();
+  $(".map-modal-state-image").attr("src","img/modal-colorado.svg");
 }
 
-// This basically just pulls info from the mapModalContent variable upstairs
+
+// This basically just pulls info from the mapModalContent object upstairs
 // and populates the map modal with appropriate content - for example so that
 // when you click on Colorado on the map, the modal shows you Colorado stuff.
 //
@@ -134,12 +121,13 @@ function writeModalContent(state) {
 
   if (mapModalContent[state.toLowerCase()].cityList.length > 1) {
     mapModalContent[state.toLowerCase()].cityList.forEach(function(city) {
-      $(".modal-location-list > ul").append(`<li><a href="${city[1]}">${city[0].replace(" ","&nbsp;")}</a></li>`)
+      $(".map-modal-location-list > ul").append(`<li><a href="${city[1]}">${city[0].replace(" ","&nbsp;")}</a></li>`)
     });
   }
 
-  $(".modal-state-image > img").attr("src",mapModalContent[state.toLowerCase()].svgPath);
+  $(".map-modal-state-image > img").attr("src",mapModalContent[state.toLowerCase()].svgPath);
 }
+
 
 // This is the meat and potatoes that actually programmatically
 // updates the modal with the appropriate state's information.
@@ -151,15 +139,18 @@ $(document).ready(function() {
     let stateID = state.id;
 
     if (states.includes(stateID) && mapModalContent[stateID.toLowerCase()].cityList.length > 1) {
+      // If a state has more than one location, this block of the IF statement resets the modal,
+      // then writes the proper modal content (based on which state the user clicked), and then
+      // displays the modal.
       resetModal();
       writeModalContent(stateID);
       showModal();
-    } else {
+    } else if (states.includes(stateID) && mapModalContent[stateID.toLowerCase()].cityList.length === 1) {
+      // If a state only has one location, this redirects the user's browser directly
+      // to that location website.
       window.location.href = mapModalContent[stateID.toLowerCase()].cityList[0][1];
+    } else if (!states.includes(stateID)) {
+      console.log(stateID + " is not presently a valid state selection.")
     }
-
-    $(`#${stateID}`).click(function() {
-      hideModal();
-    });
   });
 });

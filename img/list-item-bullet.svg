@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.69 9.69"><defs><style>.cls-1{fill:none;stroke:#199fda;stroke-miterlimit:10;stroke-width:0.48px;}.cls-2{fill:#199fda;}</style></defs><title>Asset 2</title><g id="Layer_2" data-name="Layer 2"><g id="Pop_Ups" data-name="Pop Ups"><circle class="cls-1" cx="4.85" cy="4.85" r="4.61"/><circle class="cls-2" cx="4.85" cy="4.85" r="3.15"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.69 9.69">
+  <g data-name="Pop Ups">
+    <circle cx="4.85" cy="4.85" r="4.61" fill="none" stroke="#199fda" stroke-miterlimit="10" stroke-width=".48"/>
+    <circle cx="4.85" cy="4.85" r="3.15" fill="#199fda"/>
+  </g>
+</svg>
