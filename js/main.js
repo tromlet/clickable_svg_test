@@ -97,10 +97,12 @@ $(document).ready(function() {
 //
 function showModal() {
   $(".map-modal, #map-modal-instructions").fadeIn("fast");
+  // $(".map-modal, #map-modal-instructions").show("slide", {direction: "left"}, "fast");
 }
 
 function hideModal() {
   $(".map-modal, #map-modal-instructions").fadeOut("fast");
+  // $(".map-modal, #map-modal-instructions").hide("slide", {direction: "right"}, "fast");
 }
 
 // This resets the modal so that if the user clicks a subsequent state, it doesn't get littered with

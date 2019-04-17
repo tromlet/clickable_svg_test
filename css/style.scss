@@ -3,8 +3,8 @@
 // Classes
 
 .body-container {
-    width: 100vw;
     padding: 2%;
+    margin: 3rem 0 1.5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,6 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .map-modal {
@@ -72,7 +73,7 @@
 }
 
 .map-modal-content {
-    height: 15rem;
+    height: 20rem;
     background: #fff;
     margin-bottom: .4rem;
     display: flex;
@@ -97,7 +98,7 @@
     
     li {
         background: 0% 5% / .75rem .75rem no-repeat url("../img/list-item-bullet.svg");
-        padding: 0 0 .4rem 1rem;
+        padding: 0 0 .3rem 1rem;
         margin-left: 1rem;
 
         a {
@@ -130,7 +131,7 @@
     .map-modal-ad-starburst {
         height: 5rem;
         width: 5rem;
-        margin: 0 1rem 0 .5rem;
+        margin: .1rem 1rem .1rem .5rem;
         background: center / contain no-repeat url("../img/map-modal-ad-starburst.svg");
         display: flex;
         flex-direction: column;
@@ -139,7 +140,7 @@
 
         .map-modal-ad-starburst-text {
             font-family: "Avenir Next LT Pro", Helvetica, Arial, sans-serif;
-            font-size: .75rem;
+            font-size: .7rem;
             font-weight: 900;
             text-transform: uppercase;
             color: #fff;
@@ -148,7 +149,7 @@
 
         .map-modal-ad-starburst-percent {
             font-family: "Avenir Next LT Pro", Helvetica, Arial, sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 900;
             text-transform: uppercase;
             color: #fff;
